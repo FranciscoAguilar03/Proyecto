@@ -1,22 +1,25 @@
 #Funciones
 def caract(lista):
-    print("Para su calzado, tenemos las siguientes carácterísticas:")
+    texto="Para su calzado, tenemos las siguientes carácterísticas:"
     i=0
     while i<len(lista):
-        print(lista[i])
+        texto=texto+"\n"+lista[i]
         i=i+1
-    i=0
+    return texto
+
 def modelo(lista):
-    print("Eliga su modelo favorito")
+    texto1="Elija su modelo favorito"
     i=0
     while i<len(lista):
-        print(lista[i])
+        texto1=texto1+"\n"+lista[i]
         i=i+1
-    i=0
+    return texto1
 def costototal(costotenis, pares):
     return costotenis*pares
-def pagoparcial(pago, descuento):
-    return pago*(1-(descuento/100))
+
+def calculo (pagofinal, a):
+    pagofinal=pagofinal+a
+    return pagofinal
 
 #Arreglos    
 listatamaño=["High-top", "Low-top"]
@@ -63,26 +66,37 @@ while comprar=="Sí":
     else:
         print("Una disculpa, no tenemos ese par en existencia")
     tenis=str(input())
+
+    
     print("¿Cuantos pares quieres?")
     pares=int(input())
-    pago=costototal(costotenis, pares)
-    print("¿Tiene algún código de descuento?")
-    codigo=str(input())
-    if codigo=="Sí":
-        print("¿De cuanto es su porcentaje de descuento?")
-        descuento=int(input())
-    else:
-        descuento=0
 
-    print("El costo es de", pagoparcial(pago, descuento), "por el par")
-    pagofinal=pagofinal+pagoparcial(pago, descuento)
+
+        
+
+    pagofinal=calculo(pagofinal, costototal(costotenis, pares))
+    print("El costo es de", pagofinal, "por el par")
     print("¿Desea seguir comprando?")
     comprar=str(input())
-
+    
+print("¿Desea añadir a su carrito un kit de limpieza con un costo de $200")
+kit=str(input())
+if kit=="Sí":
+    kit=200
+else:
+    kit=0
+print("¿Tiene algún código de descuento? Ingreselo")
+codigo=str(input())
+if codigo=="descuento500":
+    descuento=-500
+else:
+    descuento=0
+    
 #Resultado final
+pagofinal=calculo(pagofinal,kit)
+pagofinal=calculo(pagofinal,descuento)
 print("Su pago final es de", pagofinal)
 print("Gracias por su compra", nombre)
-    
 
 
 
