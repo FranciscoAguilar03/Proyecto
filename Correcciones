@@ -1,0 +1,34 @@
+Sub-Competencia: 
+SICTO301A
+Error original:
+No subí el avance.
+
+Cambio realizado:
+Agregar el ciclo while para repetir la compra y agregar en 2 funciones para que lea listas.
+
+Líneas de código donde se ve la corrección:
+5-8
+13-16
+43
+
+Sub-Competencia: 
+SICTO401A
+Error original:
+Las funciones que tenía el código no tenian un propósito claro además de que eran pocas.
+
+Cambio realizado:
+Añadir otras funciones que se llamen varias veces durante el código para leer listas y sumar datos.
+
+Líneas de código donde se ve la corrección:
+2-22
+
+Sub-Competencia: 
+SICTO301A
+Error original:
+El proyecto no tenía repositorio por lo que no se planteaba el contexto del proyecto
+
+Cambio realizado:
+Agregar un repositorio con una explicación general del proyecto que describa el propósito y los pasos que sigue el código.
+
+Líneas de código donde se ve la corrección:
+Repositorio
